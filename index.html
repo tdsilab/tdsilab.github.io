@@ -1852,12 +1852,11 @@
 
         // 2. 取前 10 个元素
         // 如果数组长度小于 10，则取全部元素
-        const randomImageUrls = imageUrls.slice(0, 10);
+        const randomImageUrls = imageUrls.slice(0, 8);
         
         // 使用随机取出的 URL 列表
         imageUrls = randomImageUrls;
     }
-
                     renderCarousel();
                     startAutoSlide();
 
@@ -1877,7 +1876,7 @@
                     item.innerHTML = `
                         <div class="image-wrapper">
                             <a href="${url}" target="_blank">
-                            <img src="${url}"  alt="轮播图片">
+                            <img src="${url}" >
                             </a>
                         </div>
                     `;
