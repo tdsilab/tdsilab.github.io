@@ -4,7 +4,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 输入输出目录
 input_dir = "assets/photo"
-output_dir = "assets/photo1"
+output_dir = "assets/photo2"
 
 # 创建输出目录
 os.makedirs(output_dir, exist_ok=True)
@@ -13,7 +13,7 @@ os.makedirs(output_dir, exist_ok=True)
 valid_ext = ['.jpg', '.jpeg', '.png', '.webp']
 
 # 压缩质量（10~95）
-quality = 60
+quality = 10
 
 # 是否转成 webp（True/False）
 convert_to_webp = False
@@ -74,7 +74,7 @@ def main():
     print(f"共发现 {len(tasks)} 张图片，开始多线程压缩...\n")
 
     # 线程数（可按 CPU 核心调整，建议 4~16）
-    thread_count = 8
+    thread_count = 16
 
     with ThreadPoolExecutor(max_workers=thread_count) as executor:
         future_list = {executor.submit(compress_image, inp, out): (inp, out) for inp, out in tasks}
