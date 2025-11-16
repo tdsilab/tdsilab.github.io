@@ -1868,20 +1868,21 @@
              */
             function renderCarousel() {
                 track.innerHTML = ''; // 清空现有内容
-                
-                /*// 为了实现无限循环效果（虽然本示例中简化为线性），我们渲染完整的图片列表
+              
+                // 为了实现无限循环效果（虽然本示例中简化为线性），我们渲染完整的图片列表
                 imageUrls.forEach(url => {
                     const item = document.createElement('div');
                     item.classList.add('carousel-item');
+                    compression_url = url.replace("photo","photo1");
                     item.innerHTML = `
                         <div class="image-wrapper">
                             <a href="${url}" target="_blank">
-                            <img src="${url}" >
+                            <img src="${compression_url}">
                             </a>
                         </div>
                     `;
                     track.appendChild(item);
-                });**/
+                });
             }
             
             /**
@@ -2404,7 +2405,7 @@
  <div class=elementor-widget-container>
  <h1 class="elementor-heading-title elementor-size-default">“ 期待你的加入 ”</h1> </div>
  </div>
- <!-- <div class="elementor-element elementor-element-cb38cb4 elementor-widget elementor-widget-heading animated fadeInDown" data-id=cb38cb4 data-element_type=widget data-settings='{"_animation":"fadeInDown"}' data-widget_type=heading.default>
+ <div class="elementor-element elementor-element-cb38cb4 elementor-widget elementor-widget-heading animated fadeInDown" data-id=cb38cb4 data-element_type=widget data-settings='{"_animation":"fadeInDown"}' data-widget_type=heading.default>
  <div class=elementor-widget-container>
 <div class="carousel-container">
         <div class="carousel-track" id="carouselTrack">
@@ -2414,7 +2415,7 @@
         <button class="carousel-nav" id="nextBtn">&gt;</button>
     </div>
 </div>
- </div> -->
+ </div>
  <div class="elementor-element elementor-element-6b45c40 elementor-arrows-position-outside elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-image-carousel e-widget-swiper" data-id=6b45c40 data-element_type=widget data-settings='{"slides_to_show":"3","slides_to_scroll":"3","navigation":"arrows","lazyload":"yes","speed":300,"image_spacing_custom":{"unit":"px","size":15,"sizes":[]},"autoplay":"yes","pause_on_hover":"yes","pause_on_interaction":"yes","autoplay_speed":5000,"infinite":"yes","image_spacing_custom_tablet":{"unit":"px","size":"","sizes":[]},"image_spacing_custom_mobile":{"unit":"px","size":"","sizes":[]}}' data-widget_type=image-carousel.default aria-roledescription=carousel aria-label="幻灯片 | 水平滚动：左箭头和右箭头">
  <div class=elementor-widget-container>
  <style class=sf-hidden>/*! elementor - v3.16.0 - 20-09-2023 */.elementor-widget-image-carousel .swiper-container{position:static}.elementor-widget-image-carousel .swiper-container .swiper-slide figure{line-height:inherit}.elementor-widget-image-carousel .swiper-slide{text-align:center}.elementor-image-carousel-wrapper:not(.swiper-container-initialized):not(.swiper-initialized) .swiper-slide{max-width:calc(100%/var(--e-image-carousel-slides-to-show,3))}</style> <div class="elementor-image-carousel-wrapper swiper-container swiper-container-initialized swiper-container-horizontal" dir=ltr>
