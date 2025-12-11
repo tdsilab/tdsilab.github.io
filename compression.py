@@ -4,7 +4,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 输入输出目录
 input_dir = "assets/photo"
-output_dir = "assets/photo2"
+output_dir = "assets/photo1"
 
 # 创建输出目录
 os.makedirs(output_dir, exist_ok=True)
